@@ -1,12 +1,10 @@
 package com.basicapplication.basic_application.controllers;
 
-import com.basicapplication.basic_application.beans.Customer;
+import com.basicapplication.basic_application.models.Customer;
 import com.basicapplication.basic_application.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.reflect.Method;
-import java.util.Arrays;
 import java.util.List;
 
 @RestController

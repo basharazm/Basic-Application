@@ -1,6 +1,7 @@
 package com.basicapplication.basic_application.services;
 
-import com.basicapplication.basic_application.beans.Customer;
+import com.basicapplication.basic_application.models.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +11,9 @@ import java.util.List;
 @Service
 public class CustomerService {
 
+    @Autowired
+//    CustomerRepository customerRepository;
+
     private List<Customer> customers = new ArrayList<> (Arrays.asList(
             new Customer("1", "Ahmad", "a@a.com"),
             new Customer("2", "Samer", "s@a.com"),
@@ -17,6 +21,10 @@ public class CustomerService {
     ));
 
     public List<Customer> getAllCustomers() {
+
+//        List customers = new ArrayList();
+//        customerRepository.findAll()
+//                .forEach(customers::add);
         return customers;
     }
 
@@ -25,6 +33,6 @@ public class CustomerService {
     }
 
     public void addCustomer(Customer customer) {
-        customers.add(customer);
+//        customerRepository.save(customer);
     }
 }
