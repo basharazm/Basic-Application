@@ -23,6 +23,11 @@ public class CustomerController {
         return customerService.getCustomer(id);
     }
 
+    @RequestMapping("/customers/exist/{name}")
+    public boolean isCustomerNameExist(@PathVariable  String name) {
+        return customerService.isCustomerNameExist(name);
+    }
+
     @RequestMapping(method= RequestMethod.POST, value="/customers")
     public void addCustomer(@RequestBody Customer customer) {
         customerService.addCustomer(customer);
